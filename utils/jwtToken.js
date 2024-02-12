@@ -6,7 +6,6 @@ exports.getToken = async (req,res)=>{
         const userId = req.user._id;
 
         const options = {
-
             id :userId,
             time: Date.now(),
         }

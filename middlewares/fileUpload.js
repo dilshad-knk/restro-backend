@@ -4,7 +4,7 @@ const path =require('path')
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, __dirname + '../../public/images/restaurants')
+       cb(null, path.join(__dirname, '../../public/images/restaurants'));
       },
       filename: function (req, file, cb) {
        
