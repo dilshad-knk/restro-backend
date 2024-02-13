@@ -12,7 +12,7 @@ app.use(cors({
 
 app.use(cookieParser());
 
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join('public')));
 
 
 app.use(express.urlencoded({ extended: true }));

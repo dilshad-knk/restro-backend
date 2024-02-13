@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 exports.authToken = (req,res,next) => {
 
     const {rest_token} = req.cookies;
+    console.log(req.cookies);
     
     jwt.verify(rest_token,process.env.JWT_KEY,(err,decode) => {
         if (err){

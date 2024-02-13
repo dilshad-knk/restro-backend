@@ -7,6 +7,7 @@ exports.addRestaurant = async(req,res)=>{
 
     const photograph =req.file.path;
 
+    console.log(photograph)
 
     try {
        const restaurant = await Restaurant.create({
@@ -37,7 +38,7 @@ exports.addRestaurant = async(req,res)=>{
         res.status(500).json({
 
             success: false,
-            message: 'failed to add Restaurant'
+            message: error
         })
     }
 
