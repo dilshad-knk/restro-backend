@@ -10,7 +10,7 @@ exports.getToken = async (req,res)=>{
             time: Date.now(),
         }
         
-        const cookieParams = { httpOnly: true, sameSite: "none" };
+        const cookieParams = { httpOnly: true, sameSite: "none", secure: true };
 
 
         const token = await jwt.sign(options,process.env.JWT_KEY,{expiresIn: '60min'})
