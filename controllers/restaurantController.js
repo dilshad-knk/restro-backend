@@ -7,7 +7,7 @@ exports.addRestaurant = async(req,res)=>{
 
     const photograph =req.file.path;
 
-    console.log(photograph)
+    
 
     try {
        const restaurant = await Restaurant.create({
